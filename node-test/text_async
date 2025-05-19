@@ -1,0 +1,8 @@
+var fs = require('fs');
+
+for(var i= 1; i <10; i++) {
+    var file = "sync-text-a" + i + ".txt";
+    fs.writeFile(file,"Hello Node.js!",function(err,out) {
+        console.log(out);
+    });
+    }
