@@ -1,7 +1,13 @@
 
 var express = require('express')
-, routes = require ('./routes')
-var app = express();
+, load = require ('express-load')
+, app = express();
+
+
+load('models')
+.then('controllers')
+.then('routes')
+.into(app);
 
 
 
